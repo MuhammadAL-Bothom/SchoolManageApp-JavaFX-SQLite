@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.wise.app.controller.DashboardController"
+            prefWidth="1050" prefHeight="650">
+
+    <left>
+        <VBox styleClass="sidebar" spacing="10" prefWidth="240">
+            <Label text="Dashboard" style="-fx-font-size:20; -fx-font-weight:800;"/>
+            <Label fx:id="lblUser" style="-fx-opacity:0.85;"/>
+
+            <Button text="Users" onAction="#goUsers"/>
+            <Button text="Items" onAction="#goItems"/>
+            <Button text="Transactions" onAction="#goTx"/>
+            <Button text="Reports" onAction="#goReports"/>
+            <Button text="About" onAction="#goAbout"/>
+
+            <Region VBox.vgrow="ALWAYS"/>
+            <Button text="Logout" onAction="#logout"/>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox spacing="14" style="-fx-padding:18;">
+            <Label text="Overview" style="-fx-font-size:22; -fx-font-weight:800;"/>
+
+            <HBox spacing="14">
+                <VBox styleClass="card" prefWidth="320">
+                    <Label text="Total Sales" style="-fx-opacity:0.75;"/>
+                    <Label fx:id="lblSales" style="-fx-font-size:28; -fx-font-weight:900;"/>
+                </VBox>
+
+                <VBox styleClass="card" prefWidth="320">
+                    <Label text="Transactions Count" style="-fx-opacity:0.75;"/>
+                    <Label fx:id="lblTx" style="-fx-font-size:28; -fx-font-weight:900;"/>
+                </VBox>
+            </HBox>
+
+            <VBox styleClass="card">
+                <Label text="Tips" style="-fx-font-weight:800;"/>
+                <Label text="1) Add Items first  2) Create Transactions  3) See Reports"/>
+            </VBox>
+        </VBox>
+    </center>
+
+</BorderPane>

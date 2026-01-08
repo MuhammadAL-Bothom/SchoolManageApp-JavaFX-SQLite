@@ -1,0 +1,60 @@
+.root {
+    -fx-font-family: "Segoe UI";
+    -fx-background-color: #f6f7fb;
+}
+
+/* Buttons */
+.button {
+    -fx-background-radius: 10;
+    -fx-padding: 10 14;
+    -fx-cursor: hand;
+}
+.button.primary {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+}
+.button.secondary {
+    -fx-background-color: #eef2ff;
+    -fx-text-fill: #1e40af;
+}
+
+/* Cards */
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 14;
+    -fx-padding: 16;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 18, 0.2, 0, 4);
+}
+
+/* Sidebar */
+.sidebar {
+    -fx-background-color: #0f172a;
+    -fx-padding: 18;
+}
+.sidebar .label {
+    -fx-text-fill: white;
+}
+.sidebar .button {
+    -fx-background-color: rgba(255,255,255,0.10);
+    -fx-text-fill: white;
+    -fx-background-radius: 12;
+    -fx-padding: 10 12;
+}
+.sidebar .button:hover {
+    -fx-background-color: rgba(255,255,255,0.18);
+}
+
+/* Inputs */
+.text-field, .password-field, .combo-box {
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+}
+
+/* Table */
+.table-view {
+    -fx-background-radius: 12;
+    -fx-background-color: white;
+}
+.table-view .column-header-background {
+    -fx-background-color: #eef2ff;
+}

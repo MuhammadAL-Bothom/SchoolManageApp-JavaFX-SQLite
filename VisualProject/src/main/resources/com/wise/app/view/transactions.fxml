@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.wise.app.controller.TransactionsController"
+            prefWidth="1050" prefHeight="650">
+
+    <left>
+        <VBox styleClass="sidebar" spacing="10" prefWidth="240">
+            <Label text="Transactions" style="-fx-font-size:20; -fx-font-weight:800;"/>
+            <Button text="Back" onAction="#back"/>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox spacing="12" style="-fx-padding:18;">
+            <VBox styleClass="card" spacing="10">
+                <Label text="Create Transaction" style="-fx-font-size:18; -fx-font-weight:800;"/>
+
+                <HBox spacing="10">
+                    <ComboBox fx:id="cbItems" prefWidth="360"/>
+                    <TextField fx:id="txtQty" promptText="Qty" prefWidth="120"/>
+                    <Button text="Save" onAction="#createTx" styleClass="button primary"/>
+                </HBox>
+            </VBox>
+
+            <VBox styleClass="card" spacing="10">
+                <Label text="Transactions Table" style="-fx-font-size:18; -fx-font-weight:800;"/>
+
+                <TableView fx:id="table" prefHeight="360">
+                    <columns>
+                        <TableColumn fx:id="colId" text="ID" prefWidth="70"/>
+                        <TableColumn fx:id="colUser" text="User" prefWidth="180"/>
+                        <TableColumn fx:id="colItem" text="Item" prefWidth="260"/>
+                        <TableColumn fx:id="colQty" text="Qty" prefWidth="80"/>
+                        <TableColumn fx:id="colTotal" text="Total" prefWidth="120"/>
+                        <TableColumn fx:id="colDate" text="Date" prefWidth="120"/>
+                    </columns>
+                </TableView>
+            </VBox>
+        </VBox>
+    </center>
+
+</BorderPane>

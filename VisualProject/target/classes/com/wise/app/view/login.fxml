@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.wise.app.controller.LoginController">
+
+    <HBox prefWidth="1050" prefHeight="650">
+        <VBox styleClass="sidebar" prefWidth="320" spacing="12">
+            <Label text="School Manage App" style="-fx-font-size:22; -fx-font-weight:700;"/>
+            <Label text="JavaFX + SQLite" style="-fx-opacity:0.85;"/>
+            <Label text="Login with admin/admin" style="-fx-opacity:0.85;"/>
+        </VBox>
+
+        <VBox alignment="CENTER" spacing="14" HBox.hgrow="ALWAYS">
+            <VBox styleClass="card" spacing="10" maxWidth="420">
+                <Label text="Login" style="-fx-font-size:24; -fx-font-weight:800;"/>
+                <TextField fx:id="txtUsername" promptText="Username"/>
+                <PasswordField fx:id="txtPassword" promptText="Password"/>
+
+                <HBox spacing="10">
+                    <Button text="Login" onAction="#onLogin" styleClass="button primary"/>
+                    <Button text="Register" onAction="#onGoRegister" styleClass="button secondary"/>
+                </HBox>
+            </VBox>
+        </VBox>
+    </HBox>
+
+</AnchorPane>
